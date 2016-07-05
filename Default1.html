@@ -1,0 +1,31 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css" />
+<style>
+element.style {
+    display: block;
+    z-index: 1001;
+    outline: 0px;
+    position: absolute;
+    height: auto;
+    width: 500;
+    top: 0px;
+    left: 520px;
+}
+
+</style>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#btnShow').click(function(){
+            $("#dialog").dialog();
+            $("#frame").attr("src", "files/demo.pdf");
+        }); 
+    });
+</script>
+
+<button id="btnShow">showpdf</button>
+<div id="dialog" style="display: none;">
+    <div>
+        <iframe id="frame"></iframe>
+    </div>
+</div>
